@@ -17,10 +17,11 @@ class ClientData(BaseModel):
 app = FastAPI()
 
 # Загружаем модель
-model_path = '../models/xgb_model.pkl'
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, '..', 'models', 'xgb_model.pkl')
 model = joblib.load(model_path)
-print("XGBoost модель загружена")
-print(f"Модель ожидает {model.n_features_in_} фичей")
 
 # Порог
 THRESHOLD = 0.3

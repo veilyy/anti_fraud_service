@@ -1,0 +1,9 @@
+*.csv
+*.pkl
+*.joblib
+__pycache__/
+*.py[cod]
+*.so
+.python-version
+.vscode/
+.ipynb_checkpoints/
